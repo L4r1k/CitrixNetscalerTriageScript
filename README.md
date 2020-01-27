@@ -9,13 +9,13 @@ A script to help automate the recovery of triage artifacts from compromised Nets
 
 ## How to run the script
 
-1. Curl the script down to your host
-2. Run the script `python <script_name>`
+1. Curl the script down to your host `curl https://raw.githubusercontent.com/L4r1k/CitrixNetscalerTriageScript/master/citrixTriageScript.py -o triageScript.py`
+2. Run the script `python triageScript.py`
 3. Once completed, retrieve the zip archive of recovered triage artifacts
     - `/var/artifactRecovery/<hostname>-recoveredArtifacts.zip`
 4. Remove the script and the recovery directory from the host if desired
     - `rm -rf /var/artifactRecovery`
-    - `rm <script_location>`
+    - `rm triageScript.py` (or wherever else it was saved - see the output of the script for help)
     
 ## Triage Artifacts the script tries to recover
 
