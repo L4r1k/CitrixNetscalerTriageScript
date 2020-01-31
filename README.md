@@ -6,6 +6,7 @@ A script to help automate the recovery of triage artifacts from compromised Nets
 
 1. The script creates a directory on the /var partition `/var/artifactRecovery` to store the triage artifacts temporarily
 2. The desired artifacts are copied to this temporary location then zipped into an archive `/var/artifactRecovery/<hostname>-recoveredArtifacts.zip`
+    - Shutil copytree is used to help preserve metadata such as permissions and timestamps where possible
 
 ## How to run the script
 
@@ -16,7 +17,7 @@ A script to help automate the recovery of triage artifacts from compromised Nets
 4. Remove the script and the recovery directory from the host if desired
     - `rm -rf /var/artifactRecovery`
     - `rm triageScript.py` (or wherever else it was saved - see the output of the script for help)
-    
+
 ## Triage Artifacts the script tries to recover
 
 - /var/log
